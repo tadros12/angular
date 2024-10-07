@@ -1,0 +1,39 @@
+<app-header></app-header>
+<app-navbar></app-navbar>
+<div id="content" class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <h3 class="text-center mb-4">Show Category Info</h3>
+            <form [formGroup]="editCategoryForm" (submit)="updateCategoryById()">
+                <div class="mb-3">
+                    <label for="categoryName" class="form-label">Category Name</label>
+                    <input formControlName="name" type="text" class="form-control" id="categoryName" aria-describedby="nameHelp">
+                    <div *ngIf="editCategoryForm.get('name')?.invalid && editCategoryForm.get('name')?.touched">
+                        <div *ngIf="editCategoryForm.get('name')?.hasError('required')" class="alert alert-danger" role="alert">
+                            Name is required
+                        </div>
+                        <div *ngIf="editCategoryForm.get('name')?.hasError('minlength')" class="alert alert-danger" role="alert">
+                            The length of the name must be at least 3 characters
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="categoryManager" class="form-label">Managed By</label>
+                    <select formControlName="id_editor" class="form-select" id="categoryManager" aria-label="Default select example">
+                        <option value="1">Ahmed Mohamed</option>
+                        <option value="2">Safaa Kamal</option>
+                        <option value="3">Mai Mahmoud</option>
+                        <option value="4">Taha Ali</option>
+                    </select>
+                    <div *ngIf="editCategoryForm.get('id_editor')?.invalid && editCategoryForm.get('id_editor')?.touched">
+                        <div *ngIf="editCategoryForm.get('id_editor')?.hasError('required')" class="alert alert-danger" role="alert">
+                            Manager is required
+                        </div>
+                    </div>
+                </div>
+                <button [disabled]="editCategoryForm.invalid" type="submit" class="btn btn-primary w-100">Update Category</button>
+            </form>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "title": "Welcome to our class",
+      "mainImage": "https://placehold.co/60x60/000000/FF0000/png",
+      "category": "Sport",
+      "author": "Ali Kamal Mohamed"
+    },
+    {
+      "id": 2,
+      "title": "Breaking News: Market Crash",
+      "mainImage": "https://placehold.co/60x60/000000/FF0000/png",
+      "category": "Finance",
+      "author": "John Doe"
+    },
+    {
+      "id": 3,
+      "title": "New Tech Innovations",
+      "mainImage": "https://placehold.co/60x60/000000/FF0000/png",
+      "category": "Technology",
+      "author": "Jane Smith"
+    },
+    {
+      "id": 4,
+      "title": "Health Tips for 2023",
+      "mainImage": "https://placehold.co/60x60/000000/FF0000/png",
+      "category": "Health",
+      "author": "Dr. Emily Clark"
+    },
+    {
+      "id": 5,
+      "title": "Travel Guide: Top Destinations",
+      "mainImage": "https://placehold.co/60x60/000000/FF0000/png",
+      "category": "Travel",
+      "author": "Michael Brown"
+    }
+  ]
